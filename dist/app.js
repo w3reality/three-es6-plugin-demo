@@ -46982,15 +46982,25 @@ var _three = __webpack_require__(0);
 
 var THREE = _interopRequireWildcard(_three);
 
-var _threeEs6Plugin = __webpack_require__(2);
+var _OrbitControls = __webpack_require__(2);
 
-var _threeEs6Plugin2 = _interopRequireDefault(_threeEs6Plugin);
+var _OrbitControls2 = _interopRequireDefault(_OrbitControls);
+
+var _OBJLoader = __webpack_require__(3);
+
+var _OBJLoader2 = _interopRequireDefault(_OBJLoader);
+
+var _MTLLoader = __webpack_require__(4);
+
+var _MTLLoader2 = _interopRequireDefault(_MTLLoader);
+
+var _DDSLoader = __webpack_require__(5);
+
+var _DDSLoader2 = _interopRequireDefault(_DDSLoader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-console.log('THREE_PLUGIN:', _threeEs6Plugin2.default);
 
 var canvas = document.getElementById("canvas");
 var camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000);
@@ -47001,10 +47011,10 @@ var cube = new THREE.Mesh(geometry, material);
 var scene = new THREE.Scene();
 scene.add(cube);
 
-var controls = new _threeEs6Plugin2.default.OrbitControls(camera, renderer.domElement);
-var objl = new _threeEs6Plugin2.default.OBJLoader();
-var mtll = new _threeEs6Plugin2.default.MTLLoader();
-var ddsl = new _threeEs6Plugin2.default.DDSLoader();
+var controls = new _OrbitControls2.default(camera, renderer.domElement);
+var objl = new _OBJLoader2.default();
+var mtll = new _MTLLoader2.default();
+var ddsl = new _DDSLoader2.default();
 // ...
 
 camera.position.z = 2;
@@ -47025,23 +47035,6 @@ animate();
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__es6_OrbitControls__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__es6_OBJLoader__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__es6_MTLLoader__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__es6_DDSLoader__ = __webpack_require__(6);
-// generated file
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({ OrbitControls: __WEBPACK_IMPORTED_MODULE_0__es6_OrbitControls__["a" /* default */],OBJLoader: __WEBPACK_IMPORTED_MODULE_1__es6_OBJLoader__["a" /* default */],MTLLoader: __WEBPACK_IMPORTED_MODULE_2__es6_MTLLoader__["a" /* default */],DDSLoader: __WEBPACK_IMPORTED_MODULE_3__es6_DDSLoader__["a" /* default */] });
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(0);
 
 
@@ -48085,14 +48078,15 @@ Object.defineProperties( __WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"].pr
 
 } );
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"]);
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"]);
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(0);
 
 
@@ -48890,14 +48884,15 @@ __WEBPACK_IMPORTED_MODULE_0_three__["OBJLoader"] = ( function () {
 
 } )();
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_three__["OBJLoader"]);
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_three__["OBJLoader"]);
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(0);
 
 
@@ -49461,14 +49456,15 @@ __WEBPACK_IMPORTED_MODULE_0_three__["MTLLoader"].MaterialCreator.prototype = {
 
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_three__["MTLLoader"]);
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_three__["MTLLoader"]);
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(0);
 
 
@@ -49743,7 +49739,7 @@ __WEBPACK_IMPORTED_MODULE_0_three__["DDSLoader"].parse = function ( buffer, load
 
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_three__["DDSLoader"]);
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0_three__["DDSLoader"]);
 
 
 /***/ })

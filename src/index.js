@@ -1,8 +1,11 @@
 
 import * as THREE from 'three';
-import THREE_PLUGIN from 'three-es6-plugin';
 
-console.log('THREE_PLUGIN:', THREE_PLUGIN);
+import OrbitControls from 'three-es6-plugin/es6/OrbitControls';
+import OBJLoader from 'three-es6-plugin/es6/OBJLoader';
+import MTLLoader from 'three-es6-plugin/es6/MTLLoader';
+import DDSLoader from 'three-es6-plugin/es6/DDSLoader';
+
 
 const canvas = document.getElementById("canvas");
 const camera = new THREE.PerspectiveCamera( 75, canvas.width/canvas.height, 0.1, 1000 );
@@ -14,10 +17,10 @@ const scene = new THREE.Scene();
 scene.add( cube );
 
 
-const controls = new THREE_PLUGIN.OrbitControls(camera, renderer.domElement);
-const objl = new THREE_PLUGIN.OBJLoader();
-const mtll = new THREE_PLUGIN.MTLLoader();
-const ddsl = new THREE_PLUGIN.DDSLoader();
+const controls = new OrbitControls(camera, renderer.domElement);
+const objl = new OBJLoader();
+const mtll = new MTLLoader();
+const ddsl = new DDSLoader();
 // ...
 
 camera.position.z = 2;
