@@ -1,7 +1,7 @@
 three-es6-plugin-demo
 =====================
 
-A demo app of `three-es-plugin <https://github.com/w3reality/three-es6-plugin>`__
+A demo app of `three-es6-plugin <https://github.com/w3reality/three-es6-plugin>`__
 
 Build
 -----
